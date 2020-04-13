@@ -1,5 +1,5 @@
 # manga-translation-frontend
-sample frontend for manga-translation library (Full PHP, non SQL)
+sample frontend for manga-translation library (Full PHP, no SQL)
 
 # Usage:
 ## Installation
