@@ -30,14 +30,10 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Workflow</h6>
       <a class="collapse-item <?php echo $menu['active']["upload"]?>" href="?action=upload"> 1 - Upload Image</a>
-      <a class="collapse-item <?php echo $menu['active']["detect_textboxes"]?>" href="?action=detect_textboxes"> 2 - Detect textboxes</a>
-      <a class="collapse-item <?php echo $menu['active']["edit_textboxes"]?>" href="?action=edit_textboxes"> 3 - Edit textboxes</a>
-      <a class="collapse-item <?php echo $menu['active']["ocr"]?>" href="?action=ocr"> 4 - OCR</a>
-      <a class="collapse-item <?php echo $menu['active']["ocr_validate"]?>" href="?action=ocr_validate"> 5 - OCR Result Validate</a>
-      <a class="collapse-item <?php echo $menu['active']["translate"]?>" href="?action=translate"> 6 - Translate</a>
-      <a class="collapse-item <?php echo $menu['active']["translate_validate"]?>" href="?action=translate_validate"> 7 - Translation Validate</a>
-      <a class="collapse-item <?php echo $menu['active']["clean_raw"]?>" href="?action=clean_raw"> 8 - Clean Raw</a>
-      <a class="collapse-item <?php echo $menu['active']["export"]?>" href="?action=export"> 9 - Export Result</a>
+      <a class="collapse-item <?php echo $menu['active']["textboxes"]?>" href="?action=textboxes"> 2 - Textboxes</a>
+      <a class="collapse-item <?php echo $menu['active']["ocr"]?>" href="?action=ocr"> 3 - OCR</a>
+      <a class="collapse-item <?php echo $menu['active']["translate"]?>" href="?action=translate"> 4 - Translate</a>
+      <a class="collapse-item <?php echo $menu['active']["export"]?>" href="?action=export"> 5 - Export Result</a>
     </div>
   </div>
   <div id="collapseUpload" class="collapse" aria-labelledby="heading" data-parent="#accordionSidebar">

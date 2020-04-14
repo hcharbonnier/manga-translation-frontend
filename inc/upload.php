@@ -82,7 +82,7 @@ else
               $_SESSION['filename']=$filename;
               $_SESSION['filename_ori']=$filename_ori;
               ?>
-                <a href="index.php?action=detect_textboxes" class="btn btn-primary btn-icon-split">
+                <a href="index.php?action=textboxes" class="btn btn-primary btn-icon-split">
                   <span class="icon text-white-50">
                     <i class="fas fa-flag"></i>
                   </span>

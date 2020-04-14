@@ -8,7 +8,7 @@ require_once __DIR__ . '/vendor/autoload.php'; // Autoload files using Composer 
 session_start();
 
 $action = $_REQUEST['action'] ?? 'main';
-$pages=array('workflow','upload','detect_textboxes','edit_textboxes','ocr','ocr_validate','translate','translation_validate','clean_raw','export');
+$pages=array('workflow','upload','textboxes','ocr','translate','export');
 for ($i=0 ; isset($pages[$i]); $i++)
 {
   $page=$pages[$i];
