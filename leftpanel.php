@@ -30,10 +30,9 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Workflow</h6>
       <a class="collapse-item <?php echo $menu['active']["upload"]?>" href="?action=upload"> 1 - Upload Image</a>
-      <a class="collapse-item <?php echo $menu['active']["textboxes"]?>" href="?action=textboxes"> 2 - Textboxes</a>
-      <a class="collapse-item <?php echo $menu['active']["ocr"]?>" href="?action=ocr"> 3 - OCR</a>
-      <a class="collapse-item <?php echo $menu['active']["translate"]?>" href="?action=translate"> 4 - Translate</a>
-      <a class="collapse-item <?php echo $menu['active']["export"]?>" href="?action=export"> 5 - Export Result</a>
+      <a class="collapse-item <?php echo $menu['active']["textboxes"]?>" href="?action=textboxes"> 2 - Select Textboxes</a>
+      <a class="collapse-item <?php echo $menu['active']["translate"]?>" href="?action=translate"> 3 - Translate</a>
+      <a class="collapse-item <?php echo $menu['active']["export"]?>" href="?action=export"> 4 - Export Result</a>
     </div>
   </div>
   <div id="collapseUpload" class="collapse" aria-labelledby="heading" data-parent="#accordionSidebar">
