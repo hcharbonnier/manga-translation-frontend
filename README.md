@@ -1,6 +1,6 @@
 # manga-translation-frontend
 sample frontend for manga-translation library (Full PHP, no SQL)
-
+https://github.com/hcharbonnier/mangatranslation
 # Usage:
 ## Installation
 ```sh
