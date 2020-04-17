@@ -1,6 +1,6 @@
 {
 	    "minimum-stability": "dev",
 	        "require": {
-			"hcharbonnier/mangatranslation": "^1.2.0"
+			"hcharbonnier/mangatranslation": "^1.2.1"
 		}
 }

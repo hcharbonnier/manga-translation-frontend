@@ -12,7 +12,7 @@
           var formData = new FormData();
           var file = document.getElementById('filename');
           console.log(file);
-          formData.append("MAX_FILE_SIZE", "3000000");
+          formData.append("MAX_FILE_SIZE", "30000000");
           formData.append("action", "upload");
           formData.append("filename", file.files[0]);
 

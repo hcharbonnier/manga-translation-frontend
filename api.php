@@ -17,22 +17,34 @@ if(isset($_REQUEST["action"])) {
         case 'upload':
             upload();
         break;
+        case 'merge_blocks':
+            merge_blocks($_REQUEST['id1'],$_REQUEST['id2']);
+        break;
+        case 'get_blocks':
+            echo json_encode($_SESSION['image']->get_blocks());
+        break;
+        case 'add_block':
+            add_block($value);
+        break;
+        case 'delete_block':
+            delete_block($id);
+        break;
     }
 }
 
 
-function set_block($value){
-    $old_blocks=$_SESSION['image']->get_blocks();
-    echo "old_blocks:".sizeof($old_blocks)."<br>";
-        $_SESSION['image']->del_blocks();
 
-    $new_blocks=json_decode($value,true);
-    print_r($value);
-    print_r($new_blocks);
-    
-    foreach($new_blocks as $block) {
-        $_SESSION['image']->add_block($block['x1'],$block['y1'],$block['x2'],$block['y2'],$block['x3'],$block['y3'],$block['x4'],$block['y4'],false);
-        }
+function delete_block($id){
+    $_SESSION['image']->del_block($id);
+}
+
+function add_block($value){
+    $block=json_decode($value,true);
+    $_SESSION['image']->add_block($block['x1'],$block['y1'],$block['x2'],$block['y2'],$block['x3'],$block['y3'],$block['x4'],$block['y4'],false);
+}
+
+function merge_blocks($id1,$id2){
+    $_SESSION['image']->merge_blocks($id1,$id2);
 }
 
 function upload() {
@@ -63,8 +75,12 @@ function upload() {
         $uploadOk = 0;
     }
     // Check file size
-    if ($_FILES["filename"]["size"] > 500000) {
-        header("HTTP/1.0 406 File too large");
+    if ($_FILES["filename"]["size"] > substr(ini_get('upload_max_filesize'), 0, -1) * 1048576) {
+        header("HTTP/1.0 406 File too large. upload_max_filesize:".ini_get(upload_max_filesize));
+        $uploadOk = 0;
+    }
+    if ($_FILES["filename"]["size"] > substr(ini_get('post_max_size'), 0, -1) * 1048576) {
+        header("HTTP/1.0 406 File too large. post_max_size:".ini_get(post_max_size));
         $uploadOk = 0;
     }
     // Allow certain file formats

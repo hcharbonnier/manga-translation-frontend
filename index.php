@@ -1,6 +1,6 @@
 <?php
 include("config.inc.php");
-set_time_limit(300);
+set_time_limit(3000);
 putenv("GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_APPLICATION_CREDENTIALS_PATH");
 
 require_once __DIR__ . '/vendor/autoload.php'; // Autoload files using Composer autoload
